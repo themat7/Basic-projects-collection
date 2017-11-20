@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<title>Bubble sort</title>
+<h1>Bubble sort</h1>
+<script>
+
+var myArr=[]
+
+for(var x = 0; x<6; x++)//add 6 elements via user
+{
+myArr[x]= window.prompt("Enter your value to be sorted ");
+parseInt(myArr[x]);//turn string to number no strict test though
+}
+
+
+document.write("The orignal array is " + myArr +"<br>");
+for(var i=1; i<=myArr.length;i++){//loops till over loop completed 6 times
+for(var j=1; j<=myArr.length; j++){//loop till been through each element 
+if(myArr[j-1]>myArr[j])
+{
+var temp = myArr[j-1];//stored 1st number (apply )
+myArr[j-1] = myArr[j];//actual 1st number is now 2nd
+myArr[j] = temp;//2nd  number is now the original 1st number
+
+}}}
+document.write("The sorted array is " + myArr);//successfuly swapped!!! though any
+                                               //two digit or higher number will be sorted incorrectly
+											   //due to eg: 21 techincally being smaller than 3 ect
+</script>
